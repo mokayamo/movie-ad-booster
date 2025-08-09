@@ -3,16 +3,16 @@ import React from 'react';
 
 const teamMembers = [
   {
+    role: "ディレクション担当",
+    title: "10億円規模のROI改善実績を持つプランナー",
+    description: "CVR改善の豊富な知見を基に、データに基づいた「売れる」広告訴求の企画設計を担当します。",
+    image: "./direction.png"
+  },
+  {
     role: "クリエイティブ担当",
     title: "YouTube登録者15万人超のプロクリエイター",
     description: "200万回再生を超える動画を制作してきた経験を活かし、ユーザーの目を引く高品質な動画を制作します。",
-    image: "https://picsum.photos/seed/creator/150/150"
-  },
-  {
-    role: "広告運用・企画担当",
-    title: "10億円規模のROI改善実績を持つプランナー",
-    description: "CVR改善の豊富な知見を基に、データに基づいた「売れる」広告訴求の企画設計を担当します。",
-    image: "https://picsum.photos/seed/planner/150/150"
+    image: "./creative.png"
   }
 ];
 
@@ -21,7 +21,7 @@ const Team: React.FC = () => {
     <section className="py-20 sm:py-24 bg-[#111133]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">制作 & 運用のプロが担当します</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white">運用 & 制作のプロが担当します</h2>
           <p className="mt-4 text-lg text-gray-400">各分野の専門家が、あなたのビジネスを成功に導きます。</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

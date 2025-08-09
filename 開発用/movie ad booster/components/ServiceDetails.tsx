@@ -2,11 +2,11 @@
 import React from 'react';
 
 const serviceItems = [
-  { label: "媒体", value: "Meta広告限定 (Instagram/Facebook)" },
-  { label: "動画", value: "ベース1本 + フック11パターン (計12本)" },
+  { label: "媒体", value: "Meta広告 (Instagram/Facebook)" },
+  { label: "動画", value: "月12本のショート動画" },
   { label: "改善サイクル", value: "2週間ごとに差し替え" },
   { label: "レポート", value: "月次改善レポート" },
-  { label: "契約期間", value: "3ヶ月ごとの更新 (初回3ヶ月は固定)" }
+  { label: "契約期間", value: "3ヶ月（4ヶ月目以降は毎月更新）" }
 ];
 
 const ServiceDetails: React.FC = () => {
