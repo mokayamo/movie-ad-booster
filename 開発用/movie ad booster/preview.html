@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ad Booster - プレビュー版</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a1e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #00e6a7;
+            border-radius: 10px;
+            border: 2px solid #0a0a1e;
+        }
+        
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #f3f4f6;
+            background-color: #0D0D2B;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-[#0D0D2B] text-gray-200 font-sans leading-relaxed">
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[#0D0D2B] opacity-90 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-[#0D0D2B] via-[#1a0f35] to-[#0D0D2B] z-0"></div>
+        
+        <div class="relative z-20 text-center px-4">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-4">
+                動画広告は、<br class="sm:hidden">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#00E6A7] to-[#00B4D8]">冒頭2秒</span>で成果が決まる。
+            </h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 mb-8">
+                成果を変える"フック特化型PDCA"。<br>
+                広告運用・動画制作・改善提案をまるごと支援。
+            </p>
+            <a href="mailto:soudan@movie-ad-booster.example.com?subject=動画広告ブースターの無料相談" 
+               class="inline-block py-4 px-10 rounded-full text-lg bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-bold shadow-lg shadow-cyan-500/30 hover:scale-105 transform transition-transform duration-300">
+                無料で相談する
+            </a>
+        </div>
+    </header>
+
+    <!-- Problem Solution Section -->
+    <section class="py-20 sm:py-24 bg-[#111133]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">
+                    <span class="text-[#00E6A7]">▷</span> 動画広告で成功できてますか?
+                </h2>
+                <p class="mt-4 text-lg text-gray-400">一つでも当てはまったら、私たちにご相談ください。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <!-- Problems -->
+                <div class="bg-[#0D0D2B] p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-white mb-6">こんなお悩みありませんか？</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="h-6 w-6 text-red-400 flex-shrink-0 mr-3 mt-1">⚠️</span>
+                            <span class="text-gray-300">動画広告を出しても反応が悪い</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-6 w-6 text-red-400 flex-shrink-0 mr-3 mt-1">⚠️</span>
+                            <span class="text-gray-300">広告動画の制作にコストも手間もかかる</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-6 w-6 text-red-400 flex-shrink-0 mr-3 mt-1">⚠️</span>
+                            <span class="text-gray-300">PDCAが回らず、何が悪いのか分からない</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-6 w-6 text-red-400 flex-shrink-0 mr-3 mt-1">⚠️</span>
+                            <span class="text-gray-300">どんな動画が"当たる"のか、手探り状態...</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Solutions -->
+                <div class="bg-[#0D0D2B] p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-white mb-6">動画広告ブースターなら解決できます</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="h-6 w-6 text-[#00E6A7] flex-shrink-0 mr-3 mt-1">✓</span>
+                            <div>
+                                <h4 class="text-white font-bold">冒頭2秒(フック)特化型のPDCA</h4>
+                                <p class="text-gray-400 text-sm">最も重要な冒頭の訴求を高速でテストし、成果を最大化します。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-6 w-6 text-[#00E6A7] flex-shrink-0 mr-3 mt-1">✓</span>
+                            <div>
+                                <h4 class="text-white font-bold">ワンストップで全てお任せ</h4>
+                                <p class="text-gray-400 text-sm">広告運用、動画制作、改善提案まで一気通貫でサポートします。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="h-6 w-6 text-[#00E6A7] flex-shrink-0 mr-3 mt-1">✓</span>
+                            <div>
+                                <h4 class="text-white font-bold">効率的な制作設計</h4>
+                                <p class="text-gray-400 text-sm">ベース動画1本 + フック11本で、低コストかつ多様なテストを実現します。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="py-20 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">サービス内容</h2>
+                <p class="mt-4 text-lg text-gray-400">ご提供するサービスの全体像です。</p>
+            </div>
+            <div class="bg-[#1A1A3D] rounded-2xl shadow-lg overflow-hidden border border-gray-700">
+                <div class="divide-y divide-gray-700">
+                    <div class="px-6 py-5 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-center">
+                        <dt class="font-bold text-[#00E6A7] text-lg">媒体</dt>
+                        <dd class="text-gray-300 md:col-span-2">Meta広告限定 (Instagram/Facebook)</dd>
+                    </div>
+                    <div class="px-6 py-5 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-center">
+                        <dt class="font-bold text-[#00E6A7] text-lg">動画</dt>
+                        <dd class="text-gray-300 md:col-span-2">ベース1本 + フック11パターン (計12本)</dd>
+                    </div>
+                    <div class="px-6 py-5 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-center">
+                        <dt class="font-bold text-[#00E6A7] text-lg">改善サイクル</dt>
+                        <dd class="text-gray-300 md:col-span-2">2週間ごとに差し替え</dd>
+                    </div>
+                    <div class="px-6 py-5 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-center">
+                        <dt class="font-bold text-[#00E6A7] text-lg">レポート</dt>
+                        <dd class="text-gray-300 md:col-span-2">月次改善レポート</dd>
+                    </div>
+                    <div class="px-6 py-5 grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 items-center">
+                        <dt class="font-bold text-[#00E6A7] text-lg">契約期間</dt>
+                        <dd class="text-gray-300 md:col-span-2">3ヶ月ごとの更新 (初回3ヶ月は固定)</dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 sm:py-24 bg-[#111133]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">
+                    <span class="text-[#00E6A7]">✓</span> 導入までの5ステップ
+                </h2>
+                <p class="mt-4 text-lg text-gray-400">お申し込みから運用開始まで、スムーズに進行します。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-extrabold text-3xl mb-4 border-4 border-[#111133] z-10">1</div>
+                    <h3 class="font-bold text-xl text-white mb-2">無料相談</h3>
+                    <p class="text-gray-400">ヒアリング・方向性確認</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-extrabold text-3xl mb-4 border-4 border-[#111133] z-10">2</div>
+                    <h3 class="font-bold text-xl text-white mb-2">お申し込み</h3>
+                    <p class="text-gray-400">フォーム入力・契約書締結</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-extrabold text-3xl mb-4 border-4 border-[#111133] z-10">3</div>
+                    <h3 class="font-bold text-xl text-white mb-2">動画企画 & 制作</h3>
+                    <p class="text-gray-400">ベース + フック11本</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-extrabold text-3xl mb-4 border-4 border-[#111133] z-10">4</div>
+                    <h3 class="font-bold text-xl text-white mb-2">広告スタート</h3>
+                    <p class="text-gray-400">Meta広告配信開始</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-extrabold text-3xl mb-4 border-4 border-[#111133] z-10">5</div>
+                    <h3 class="font-bold text-xl text-white mb-2">高速PDCA運用</h3>
+                    <p class="text-gray-400">2週間ごとに差し替え改善</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">プランと料金</h2>
+                <p class="mt-4 text-lg text-gray-400">透明性の高い料金体系で、安心してご利用いただけます。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Main Plan -->
+                <div class="bg-[#1A1A3D] rounded-2xl p-8 shadow-lg border-2 border-[#00E6A7] relative flex flex-col">
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-white">基本プラン</h3>
+                        <p class="text-gray-400 mt-2 mb-6">動画制作から改善運用まで全てコミコミ</p>
+                        
+                        <div class="my-6">
+                            <p class="text-gray-400">広告媒体費</p>
+                            <p class="text-3xl font-bold text-white">¥500,000<span class="text-lg font-normal text-gray-400">〜 / 月</span></p>
+                        </div>
+
+                        <div class="my-6">
+                            <p class="text-gray-400">運用手数料</p>
+                            <p class="text-3xl font-bold text-white">媒体費の20%</p>
+                        </div>
+                        
+                        <div class="bg-green-500/20 text-[#00E6A7] p-4 rounded-lg flex items-center gap-3">
+                            <span class="w-8 h-8">✓</span>
+                            <div>
+                                <span class="font-bold text-lg">制作費</span>
+                                <p>手数料内に含む</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Options -->
+                <div class="bg-[#1A1A3D] rounded-2xl p-8 shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-white">オプション</h3>
+                    <p class="text-gray-400 mt-2 mb-6">追加でご利用いただけるサービス</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center py-3 border-b border-gray-700">
+                            <span class="text-gray-300">人物撮影動画</span>
+                            <span class="text-white font-bold">¥100,000/本</span>
+                        </li>
+                        <li class="flex justify-between items-center py-3 border-b border-gray-700">
+                            <span class="text-gray-300">ベース動画追加</span>
+                            <span class="text-white font-bold">¥50,000/本</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <footer class="bg-[#111133]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">さあ、動画広告の成果を<br>ブーストさせましょう。</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                ご相談は無料です。まずはお気軽にお問い合わせください。<br>
+                無理な営業は一切いたしませんのでご安心ください。
+            </p>
+            <a href="mailto:soudan@movie-ad-booster.example.com?subject=動画広告ブースターの無料相談" 
+               class="inline-block py-4 px-10 rounded-full text-lg bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-bold shadow-lg shadow-cyan-500/30 hover:scale-105 transform transition-transform duration-300">
+                無料で相談する
+            </a>
+        </div>
+        <div class="bg-[#0D0D2B] py-6">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+                <p class="mb-4 sm:mb-0">&copy; 2025 Movie Ad Booster. All Rights Reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition-colors">利用規約</a>
+                    <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition-colors">特定商取引法に基づく表記</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
