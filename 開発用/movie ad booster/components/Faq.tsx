@@ -30,7 +30,7 @@ const FaqItem: React.FC<{ item: FaqItemType }> = ({ item }) => {
     <div className="border-b border-gray-700">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left py-6 flex justify-between items-center"
+        className="w-full text-left py-4 sm:py-5 flex justify-between items-center"
       >
         <span className="text-lg font-semibold text-white">{item.question}</span>
         <ArrowDownIcon className={`w-6 h-6 text-[#00E6A7] transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
@@ -46,13 +46,13 @@ const FaqItem: React.FC<{ item: FaqItemType }> = ({ item }) => {
 
 const Faq: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24">
+    <section className="py-12 sm:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">よくある質問</h2>
           <p className="mt-4 text-lg text-gray-400">疑問や懸念点はここで解決。</p>
         </div>
-        <div className="bg-[#1A1A3D] rounded-2xl p-4 sm:p-8 shadow-lg border border-gray-700">
+        <div className="bg-[#1A1A3D] rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-700">
           {faqData.map((item, index) => (
             <FaqItem key={index} item={item} />
           ))}

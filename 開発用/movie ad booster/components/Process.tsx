@@ -11,9 +11,9 @@ const steps = [
 
 const Process: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24 bg-[#111133]">
+    <section className="py-12 sm:py-16 bg-[#111133]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">
             <span className="text-[#00E6A7]">✓</span> 導入までの5ステップ
           </h2>
@@ -21,16 +21,18 @@ const Process: React.FC = () => {
         </div>
         <div className="relative">
           {/* The connecting line */}
-          <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:right-auto md:mx-0 top-10 bottom-10 w-1 bg-gray-700 rounded-full md:hidden"></div>
+          <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:right-auto md:mx-0 top-10 bottom-10 w-1 bg-gray-700 rounded-full md:hidden z-0"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 sm:gap-10 md:gap-6">
             {steps.map((step) => (
-              <div key={step.number} className="flex flex-col items-center text-center">
+              <div key={step.number} className="flex flex-col items-center text-center px-2 relative z-20">
                 <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-extrabold text-3xl mb-4 border-4 border-[#111133] z-10">
                   {step.number}
                 </div>
-                <h3 className="font-bold text-xl text-white mb-2">{step.title}</h3>
-                <p className="text-gray-400">{step.description}</p>
+                <div className="bg-[#111133] px-3 py-2 rounded-lg">
+                  <h3 className="font-bold text-lg sm:text-xl text-white mb-2">{step.title}</h3>
+                  <p className="text-sm sm:text-base text-gray-400">{step.description}</p>
+                </div>
               </div>
             ))}
           </div>

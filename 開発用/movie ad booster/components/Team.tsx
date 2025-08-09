@@ -18,15 +18,15 @@ const teamMembers = [
 
 const Team: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24 bg-[#111133]">
+    <section className="py-12 sm:py-16 bg-[#111133]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">運用 & 制作のプロが担当します</h2>
           <p className="mt-4 text-lg text-gray-400">各分野の専門家が、あなたのビジネスを成功に導きます。</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {teamMembers.map((member, index) => (
-            <div key={index} className="bg-[#0D0D2B] rounded-2xl p-8 text-center flex flex-col items-center shadow-2xl transform hover:-translate-y-2 transition-transform duration-300">
+            <div key={index} className="bg-[#0D0D2B] rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center shadow-2xl transform hover:-translate-y-2 transition-transform duration-300">
               <img src={member.image} alt={member.role} className="w-32 h-32 rounded-full mb-6 border-4 border-[#00E6A7]" />
               <span className="text-sm font-bold text-[#00E6A7] uppercase tracking-wider">{member.role}</span>
               <h3 className="text-xl font-bold text-white mt-2 mb-3">{member.title}</h3>

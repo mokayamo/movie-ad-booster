@@ -4,16 +4,16 @@ import { CheckIcon } from '../constants';
 
 const Pricing: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24">
+    <section className="py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">プランと料金</h2>
           <p className="mt-4 text-lg text-gray-400">透明性の高い料金体系で、安心してご利用いただけます。</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {/* Main Plan */}
-          <div className="bg-[#1A1A3D] rounded-2xl p-8 shadow-lg border-2 border-[#00E6A7] relative flex flex-col">
+          <div className="bg-[#1A1A3D] rounded-2xl p-6 sm:p-8 shadow-lg border-2 border-[#00E6A7] relative flex flex-col">
             <div className="flex-grow">
                 <h3 className="text-2xl font-bold text-white">基本プラン</h3>
                 <p className="text-gray-400 mt-2 mb-6">動画制作から改善運用まで全てコミコミ</p>
@@ -39,7 +39,7 @@ const Pricing: React.FC = () => {
           </div>
 
           {/* Options */}
-          <div className="bg-[#1A1A3D] rounded-2xl p-8 shadow-lg flex flex-col border border-gray-700">
+          <div className="bg-[#1A1A3D] rounded-2xl p-6 sm:p-8 shadow-lg flex flex-col border border-gray-700">
              <div className="flex-grow">
                 <h3 className="text-2xl font-bold text-white">オプション</h3>
                 <p className="text-gray-400 mt-2 mb-6">ご要望に応じて柔軟に対応可能です</p>

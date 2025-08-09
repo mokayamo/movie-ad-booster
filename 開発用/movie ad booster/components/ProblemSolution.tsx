@@ -19,31 +19,30 @@ const solutions = [
 
 const ProblemSolution: React.FC = () => {
   return (
-    <section className="py-20 sm:py-24 bg-[#111133]">
+    <section className="py-12 sm:py-16 bg-[#111133]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">
             <span className="text-[#00E6A7]">▷</span> 動画広告で成功できてますか?
           </h2>
           <p className="mt-4 text-lg text-gray-400">一つでも当てはまったら、私たちにご相談ください。</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Problems */}
-          <div className="bg-[#0D0D2B] p-10 rounded-2xl shadow-2xl">
-            <div className="mb-8"></div>
+          <div className="bg-[#0D0D2B] p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl">
             <ul className="space-y-6">
               {problems.map((problem, index) => (
                 <li key={index} className="flex items-start">
                   <ProblemIcon className="h-7 w-7 text-red-400 flex-shrink-0 mr-4 mt-1" />
-                  <span className="text-gray-300 text-lg leading-relaxed">{problem}</span>
+                  <span className="text-gray-300 text-xl leading-relaxed">{problem}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Solutions */}
-          <div className="bg-gradient-to-br from-[#1a2a6c] to-[#0D0D2B] p-10 rounded-2xl shadow-2xl border border-cyan-500/30">
+          <div className="bg-gradient-to-br from-[#1a2a6c] to-[#0D0D2B] p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl border border-cyan-500/30">
             <h3 className="text-2xl font-bold text-white mb-6">動画広告ブースターなら<span className="text-[#00E6A7]">解決できます</span></h3>
             <ul className="space-y-5">
               {solutions.map((solution, index) => (
