@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#111133]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">さあ、動画広告の成果を<br/>ブーストさせましょう。</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">動画広告でweb集客を<br/>ブーストさせよう</h2>
         <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
           ご相談は無料です。まずはお気軽にお問い合わせください。<br/>
           無理な営業は一切いたしませんのでご安心ください。

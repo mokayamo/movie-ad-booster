@@ -3,10 +3,10 @@ import React from 'react';
 
 const steps = [
   { number: 1, title: "無料相談", description: "ヒアリング・方向性確認" },
-  { number: 2, title: "お申し込み", description: "フォーム入力・契約書締結" },
+  { number: 2, title: "お申し込み", description: "契約書の締結" },
   { number: 3, title: "動画企画 & 制作", description: "ベース + フック11本" },
   { number: 4, title: "広告スタート", description: "アカウント構築" },
-  { number: 5, title: "高速PDCA運用", description: "2週間ごとに差し替え改善" }
+  { number: 5, title: "高速PDCA運用", description: "2週間サイクルで改善" }
 ];
 
 const Process: React.FC = () => {

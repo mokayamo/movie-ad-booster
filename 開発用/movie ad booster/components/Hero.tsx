@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         <img 
           src="./image.png" 
           alt="動画広告ブースター" 
-          className="h-8 sm:h-12 md:h-16 w-auto object-contain drop-shadow-lg"
+          className="h-6 sm:h-8 md:h-10 w-auto object-contain drop-shadow-lg"
         />
       </div>
       
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           <div className="text-center lg:text-left flex flex-col justify-center mt-20 sm:mt-16 lg:mt-4 ml-4 lg:ml-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white mb-6 lg:mb-8">
               動画広告は、<br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00E6A7] to-[#00B4D8]">冒頭2秒</span>で<br />成果が決まる。
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] whitespace-nowrap">冒頭2秒で成果が決まる。</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-300 mb-8 lg:mb-10 max-w-2xl mx-auto lg:mx-0">
               成果を変える"フック特化型PDCA"。<br />
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
               <img 
                 src="./hero-phone.png" 
                 alt="動画広告のモバイル表示例" 
-                className="relative w-72 sm:w-80 md:w-96 lg:w-[420px] xl:w-[480px] h-auto object-contain drop-shadow-2xl transform -rotate-1"
+                className="relative w-96 sm:w-[420px] md:w-[480px] lg:w-[540px] xl:w-[600px] h-auto object-contain drop-shadow-2xl transform -rotate-1"
               />
               
               {/* Floating elements for visual impact */}

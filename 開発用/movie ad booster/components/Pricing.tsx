@@ -51,7 +51,7 @@ const Pricing: React.FC = () => {
                     </li>
                     <li className="border-b border-gray-700 pb-4">
                         <p className="text-white">ベース動画追加</p>
-                        <p className="text-2xl font-bold text-[#00E6A7]">+ ¥50,000<span className="text-sm font-normal text-gray-400"> / 本</span></p>
+                        <p className="text-2xl font-bold text-[#00E6A7]">+ ¥30,000<span className="text-sm font-normal text-gray-400"> / 本</span></p>
                     </li>
                 </ul>
              </div>

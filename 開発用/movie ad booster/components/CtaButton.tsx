@@ -14,7 +14,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className = '', isPrima
   return (
     <a
       href="mailto:soudan@movie-ad-booster.example.com?subject=動画広告ブースターの無料相談"
-      className={`inline-block py-4 px-10 rounded-full text-lg ${isPrimary ? primaryClasses : secondaryClasses} ${className}`}
+      className={`inline-block py-5 px-12 sm:py-6 sm:px-14 rounded-full text-xl sm:text-2xl font-semibold ${isPrimary ? primaryClasses : secondaryClasses} ${className}`}
     >
       {children}
     </a>
