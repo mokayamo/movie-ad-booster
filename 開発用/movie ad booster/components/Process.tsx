@@ -11,11 +11,11 @@ const steps = [
 
 const Process: React.FC = () => {
   return (
-    <section className="py-12 sm:py-16 bg-[#111133]">
+    <section className="py-16 sm:py-20 bg-[#0D0D2B]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-            <span className="text-[#00E6A7]">✓</span> 導入までの5ステップ
+            導入までの5ステップ
           </h2>
           <p className="mt-4 text-lg text-gray-400">お申し込みから運用開始まで、スムーズに進行します。</p>
         </div>
@@ -29,7 +29,7 @@ const Process: React.FC = () => {
                 <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#00E6A7] to-[#00B4D8] text-[#0D0D2B] font-extrabold text-3xl mb-4 border-4 border-[#111133] z-10">
                   {step.number}
                 </div>
-                <div className="bg-[#111133] px-3 py-2 rounded-lg">
+                <div className="bg-[#111133] rounded-2xl p-4 sm:p-6 shadow-xl shadow-[#00E6A7]/30 border-2 border-[#00E6A7]/60 hover:border-[#00E6A7] transition-all duration-300 hover:shadow-[#00E6A7]/50 hover:shadow-2xl">
                   <h3 className="font-bold text-lg sm:text-xl text-white mb-2">{step.title}</h3>
                   <p className="text-sm sm:text-base text-gray-400">{step.description}</p>
                 </div>

@@ -2,6 +2,8 @@
 import React from 'react';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
+import WhyVideoAdsFail from './components/WhyVideoAdsFail';
+import CtaSection from './components/CtaSection';
 import ServiceDetails from './components/ServiceDetails';
 import Process from './components/Process';
 import Pricing from './components/Pricing';
@@ -15,6 +17,8 @@ function App() {
       <Hero />
       <main>
         <ProblemSolution />
+        <WhyVideoAdsFail />
+        <CtaSection />
         <ServiceDetails />
         <Process />
         <Pricing />
