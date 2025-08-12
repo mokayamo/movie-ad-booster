@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
               広告運用・動画制作・改善提案をまるごと支援。
             </p>
             <div className="flex justify-center lg:justify-start">
-              <CtaButton>無料で相談する</CtaButton>
+              <CtaButton variant="orange" size="large">無料で相談する</CtaButton>
             </div>
           </div>
           

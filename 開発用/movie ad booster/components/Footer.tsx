@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           ご相談は無料です。まずはお気軽にお問い合わせください。<br/>
           無理な営業は一切いたしませんのでご安心ください。
         </p>
-        <CtaButton>無料で相談する</CtaButton>
+        <CtaButton variant="orange" size="large">無料で相談する</CtaButton>
       </div>
       <div className="bg-[#0D0D2B] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">

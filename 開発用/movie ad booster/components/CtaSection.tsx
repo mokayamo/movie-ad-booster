@@ -13,7 +13,7 @@ const CtaSection: React.FC = () => {
             あなたの動画広告の課題を解決する最適なプランをご提案します
           </p>
         </div>
-        <CtaButton variant="primary" size="large">
+        <CtaButton variant="orange" size="large">
           無料で相談する
         </CtaButton>
       </div>

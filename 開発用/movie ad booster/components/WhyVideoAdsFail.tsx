@@ -192,10 +192,10 @@ const WhyVideoAdsFail: React.FC = () => {
               </div>
               <div className="bg-[#111133] rounded-2xl p-6 sm:p-8 shadow-xl shadow-[#00E6A7]/30 border-2 border-[#00E6A7]/60 hover:border-[#00E6A7] transition-all duration-300 hover:shadow-[#00E6A7]/50 hover:shadow-2xl text-center">
                 <div className="mb-4">
-                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">ベネフィット先行</h4>
+                  <h4 className="text-xl sm:text-2xl font-bold text-white mb-2">高速PDCA</h4>
                   <div className="h-1 w-12 bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] rounded-full mx-auto"></div>
                 </div>
-                <p className="text-gray-300 text-base">ユーザー価値を最初に訴求</p>
+                <p className="text-gray-300 text-base">月12本以上の動画クリエイティブ</p>
               </div>
             </div>
           </div>
