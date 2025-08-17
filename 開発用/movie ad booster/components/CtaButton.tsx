@@ -27,7 +27,7 @@ const CtaButton: React.FC<CtaButtonProps> = ({ children, className = '', variant
 
   return (
     <a
-      href="mailto:soudan@movie-ad-booster.example.com?subject=動画広告ブースターの無料相談"
+      href="/contact.html"
       className={`inline-block rounded-full font-semibold ${getVariantClasses()} ${sizeClasses} ${className}`}
     >
       {children}

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無料相談フォーム - 動画広告ブースター</title>
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0D0D2B;
+            color: #E5E5E5;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 50;
+        }
+        
+        .logo img {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+        }
+        
+        @media (min-width: 640px) {
+            .logo {
+                top: 24px;
+                left: 24px;
+            }
+            
+            .logo img {
+                height: 32px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .logo {
+                top: 32px;
+                left: 32px;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+        }
+        
+        .header {
+            background-color: #0D0D2B;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #00E6A7, #00B4D8);
+            border-radius: 2px;
+        }
+        
+        .header p {
+            color: #B3B3B3;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+        
+        .content-wrapper {
+            background-color: #111133;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 20px 40px rgba(0, 230, 167, 0.3);
+            border: 2px solid rgba(0, 230, 167, 0.6);
+            transition: all 0.3s ease;
+        }
+        
+        .content-wrapper:hover {
+            border-color: #00E6A7;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 40px rgba(0, 230, 167, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .required {
+            color: #FF6B6B;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background-color: #1a1a3e;
+            color: #E5E5E5;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00E6A7;
+            box-shadow: 0 0 0 3px rgba(0, 230, 167, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            display: block;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 20px auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+            cursor: pointer;
+            width: auto;
+            text-align: center;
+        }
+        
+        .submit-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 30px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+        }
+        
+        .back-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, rgba(0, 230, 167, 0.05), rgba(0, 180, 216, 0.05));
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 3px solid #00E6A7;
+        }
+        
+        .contact-info h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+        }
+        
+        .contact-info p {
+            color: #B3B3B3;
+            margin-bottom: 8px;
+        }
+        
+        .contact-info a {
+            color: #00E6A7;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        /* reCAPTCHA中央配置 */
+        .recaptcha-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-wrapper {
+                padding: 25px;
+            }
+            
+            .submit-button {
+                padding: 14px 32px;
+            }
+        }
+    </style>
+    
+    <script>
+        // EmailJS初期化
+        (function() {
+            emailjs.init('EBbdNPC9HVmTR63_u');
+        })();
+
+        // フォーム送信処理
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const successMessage = document.getElementById('success-message');
+            const errorMessage = document.getElementById('error-message');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // reCAPTCHA検証
+                const recaptchaResponse = grecaptcha.getResponse();
+                if (!recaptchaResponse) {
+                    alert('reCAPTCHAを完了してください。');
+                    return;
+                }
+                
+                // ボタンを無効化
+                submitBtn.disabled = true;
+                submitBtn.textContent = '送信中...';
+                
+                // メッセージを非表示
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                
+                // フォームデータ取得
+                const formData = {
+                    company: document.getElementById('company').value,
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    consultation_content: document.getElementById('consultation-content').value,
+                    date: new Date().toLocaleDateString('ja-JP'),
+                    to_email: 'chiaki.hiroshima@gmail.com',
+                    recaptcha_response: recaptchaResponse
+                };
+                
+                // メール送信
+                emailjs.send('service_xrpstdt', 'template_0cxq5jk', formData)
+                    .then(function() {
+                        // 成功時の処理
+                        form.style.display = 'none';
+                        successMessage.style.display = 'block';
+                        // reCAPTCHAをリセット
+                        grecaptcha.reset();
+                    })
+                    .catch(function(error) {
+                        // エラー時の処理
+                        console.error('メール送信エラー:', error);
+                        errorMessage.style.display = 'block';
+                        
+                        // ボタンを再度有効化
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = '送信する';
+                        // reCAPTCHAをリセット
+                        grecaptcha.reset();
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Logo positioned like main page -->
+    <div class="logo">
+        <a href="/">
+            <img src="./image.png" alt="動画広告ブースター" />
+        </a>
+    </div>
+    
+    <div class="header">
+        <h1>無料相談フォーム</h1>
+        <p>動画広告の成果を上げるための無料相談を承っております。お気軽にお問い合わせください。</p>
+    </div>
+    
+    <div class="container">
+        <div class="content-wrapper">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="company">会社名 <span class="required">*</span></label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="consultation-content">相談内容 <span class="required">*</span></label>
+                    <textarea id="consultation-content" name="consultation-content" placeholder="動画広告に関するご相談内容をお聞かせください" required></textarea>
+                </div>
+                
+                <!-- reCAPTCHA -->
+                <div class="form-group recaptcha-center">
+                    <div class="g-recaptcha" data-sitekey="6LeTr6grAAAAAD40iYRzIXsKu30-PgNjjj-pln2z"></div>
+                </div>
+                
+                <button type="submit" class="submit-button" id="submit-btn">送信する</button>
+            </form>
+            
+            <!-- 送信完了メッセージ -->
+            <div id="success-message" style="display: none; text-align: center; padding: 20px;">
+                <h3 style="color: #00E6A7; margin-bottom: 10px;">送信完了</h3>
+                <p style="color: #B3B3B3;">お問い合わせありがとうございます。<br>確認メールをお送りしましたので、ご確認ください。<br>近日中にご回答いたします。</p>
+            </div>
+            
+            <!-- エラーメッセージ -->
+            <div id="error-message" style="display: none; text-align: center; padding: 20px;">
+                <h3 style="color: #FF6B6B; margin-bottom: 10px;">送信エラー</h3>
+                <p style="color: #B3B3B3;">送信に失敗しました。しばらく経ってから再度お試しください。</p>
+            </div>
+            
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="/" class="back-button">トップページに戻る</a>
+        </div>
+    </div>
+    
+    <footer style="background-color: #0D0D2B; padding: 24px 0;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; align-items: center; gap: 16px; font-size: 0.875rem; color: #6B7280;">
+            <p style="margin-bottom: 16px; color: #6B7280; font-size: 0.875rem;">© 2025 株式会社テマヒマ. All Rights Reserved.</p>
+            <div style="display: flex; gap: 16px;">
+                <a href="/terms.html" style="color: #6B7280; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6B7280'">利用規約</a>
+                <a href="/privacy.html" style="color: #6B7280; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6B7280'">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        @media (min-width: 640px) {
+            footer > div {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+            footer p {
+                margin-bottom: 0 !important;
+            }
+        }
+        @media (min-width: 768px) {
+            footer > div {
+                padding: 0 32px !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            footer > div {
+                padding: 0 32px !important;
+            }
+        }
+    </style>
+</body>
+</html>

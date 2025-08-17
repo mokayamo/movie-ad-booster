@@ -16,6 +16,10 @@
     {
       "src": "privacy.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "contact.html",
+      "use": "@vercel/static"
     }
   ]
 }
