@@ -8,6 +8,14 @@
       "config": {
         "distDir": "dist"
       }
+    },
+    {
+      "src": "terms.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "privacy.html",
+      "use": "@vercel/static"
     }
   ]
 }
