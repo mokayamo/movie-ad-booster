@@ -10,11 +10,13 @@ const Hero: React.FC = () => {
       
       {/* Logo positioned like ビズサイ */}
       <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 z-30">
-        <img 
-          src="./image.png" 
-          alt="動画広告ブースター" 
-          className="h-6 sm:h-8 md:h-10 w-auto object-contain drop-shadow-lg"
-        />
+        <a href="/">
+          <img 
+            src="./image.png" 
+            alt="動画広告ブースター" 
+            className="h-6 sm:h-8 md:h-10 w-auto object-contain drop-shadow-lg hover:opacity-80 transition-opacity duration-300"
+          />
+        </a>
       </div>
       
       <div className="relative z-20 h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pt-8">

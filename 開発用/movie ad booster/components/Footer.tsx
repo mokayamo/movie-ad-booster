@@ -15,11 +15,10 @@ const Footer: React.FC = () => {
       </div>
       <div className="bg-[#0D0D2B] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
-          <p className="mb-4 sm:mb-0">&copy; {new Date().getFullYear()} Movie Ad Booster. All Rights Reserved.</p>
+          <p className="mb-4 sm:mb-0">&copy; 2025 株式会社テマヒマ. All Rights Reserved.</p>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-white transition-colors">利用規約</a>
-            <a href="#" className="hover:text-white transition-colors">プライバシーポリシー</a>
-            <a href="#" className="hover:text-white transition-colors">特定商取引法に基づく表記</a>
+            <a href="/terms.html" className="hover:text-white transition-colors">利用規約</a>
+            <a href="/privacy.html" className="hover:text-white transition-colors">プライバシーポリシー</a>
           </div>
         </div>
       </div>

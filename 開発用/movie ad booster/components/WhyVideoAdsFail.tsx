@@ -39,6 +39,9 @@ const WhyVideoAdsFail: React.FC = () => {
               動画広告がうまくいかない理由
             </h2>
             <p className="mt-4 text-lg text-gray-400">多くの企業が陥りがちな動画広告の落とし穴</p>
+            <div className="mt-4 flex justify-center">
+              <div className="h-1 w-16 bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] rounded-full"></div>
+            </div>
           </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -170,6 +173,9 @@ const WhyVideoAdsFail: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-extrabold text-white">
               フック主義アプローチによる解決
             </h2>
+            <div className="mt-4 flex justify-center">
+              <div className="h-1 w-16 bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] rounded-full"></div>
+            </div>
           </div>
 
         {/* 解決策の3つのアプローチ */}

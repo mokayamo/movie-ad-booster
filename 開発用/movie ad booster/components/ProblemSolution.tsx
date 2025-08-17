@@ -26,6 +26,9 @@ const ProblemSolution: React.FC = () => {
             動画広告で成功できてますか?
           </h2>
           <p className="mt-4 text-lg text-gray-400">一つでも当てはまったら、私たちにご相談ください。</p>
+          <div className="mt-4 flex justify-center">
+            <div className="h-1 w-16 bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] rounded-full"></div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start">

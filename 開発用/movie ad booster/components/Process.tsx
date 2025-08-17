@@ -18,6 +18,9 @@ const Process: React.FC = () => {
             導入までの5ステップ
           </h2>
           <p className="mt-4 text-lg text-gray-400">お申し込みから運用開始まで、スムーズに進行します。</p>
+          <div className="mt-4 flex justify-center">
+            <div className="h-1 w-16 bg-gradient-to-r from-[#00E6A7] to-[#00B4D8] rounded-full"></div>
+          </div>
         </div>
         <div className="relative">
           {/* The connecting line */}

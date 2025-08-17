@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - 動画広告ブースター</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #0D0D2B;
+            color: #E5E5E5;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 50;
+        }
+        
+        .logo img {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+        }
+        
+        @media (min-width: 640px) {
+            .logo {
+                top: 24px;
+                left: 24px;
+            }
+            
+            .logo img {
+                height: 32px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .logo {
+                top: 32px;
+                left: 32px;
+            }
+            
+            .logo img {
+                height: 40px;
+            }
+        }
+        
+        .header {
+            background-color: #0D0D2B;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #00E6A7, #00B4D8);
+            border-radius: 2px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+        
+        .content-wrapper {
+            background-color: #111133;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 20px 40px rgba(0, 230, 167, 0.3);
+            border: 2px solid rgba(0, 230, 167, 0.6);
+            transition: all 0.3s ease;
+        }
+        
+        .content-wrapper:hover {
+            border-color: #00E6A7;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 20px 40px rgba(0, 230, 167, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .intro {
+            color: #B3B3B3;
+            margin-bottom: 40px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid transparent;
+            background: linear-gradient(to right, rgba(0, 230, 167, 0.5), rgba(0, 180, 216, 0.5)) bottom / 100% 2px no-repeat;
+            padding-bottom: 12px;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        p, ul {
+            color: #B3B3B3;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        ul {
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+        }
+        
+        .company-info {
+            background: linear-gradient(135deg, rgba(0, 230, 167, 0.05), rgba(0, 180, 216, 0.05));
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid #00E6A7;
+        }
+        
+        .company-info p {
+            margin-bottom: 8px;
+            color: #B3B3B3;
+        }
+        
+        .company-info strong {
+            color: #E5E5E5;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 30px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+        }
+        
+        .back-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-wrapper {
+                padding: 25px;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo positioned like main page -->
+    <div class="logo">
+        <a href="/">
+            <img src="./public/image.png" alt="動画広告ブースター" />
+        </a>
+    </div>
+    
+    <div class="header">
+        <h1>プライバシーポリシー</h1>
+    </div>
+    
+    <div class="container">
+        <div class="content-wrapper">
+            <p class="intro">株式会社テマヒマ（以下「当社」といいます）は、お客様の個人情報の重要性を認識し、以下の方針に基づき適切な管理と保護に努めます。</p>
+            
+            <h2>1. 個人情報の定義</h2>
+            <p>本ポリシーにおける「個人情報」とは、氏名、会社名、メールアドレス、電話番号等、特定の個人を識別できる情報を指します。</p>
+            
+            <h2>2. 個人情報の取得について</h2>
+            <p>当社は、お問い合わせ・お申し込みフォームの入力などを通じて、お客様から個人情報を適正かつ公正な手段で取得します。</p>
+            
+            <h2>3. 利用目的について</h2>
+            <p>取得した個人情報は、以下の目的で利用します。</p>
+            <ul>
+                <li>本サービスに関するご連絡・ご案内</li>
+                <li>サービス提供および契約手続きの遂行</li>
+                <li>サービス改善のためのご意見・ご要望の収集</li>
+                <li>法令等に基づく対応</li>
+                <li>アクセス解析およびマーケティング目的のデータ分析</li>
+            </ul>
+            
+            <h2>4. Cookieおよびアクセス解析について</h2>
+            <p>当社ウェブサイトでは、サービス向上のためにCookieおよび類似技術を使用しています。これにより、訪問状況や行動履歴などの情報を収集し、Google Analytics等のツールを用いたアクセス解析に活用する場合があります。</p>
+            <p>Cookieの利用を希望されない場合は、ブラウザの設定により無効化することが可能です。ただし、その場合、一部の機能がご利用いただけない場合があります。</p>
+            
+            <h2>5. 個人情報の第三者提供について</h2>
+            <p>当社は、法令に基づく場合を除き、ユーザーの同意なく個人情報を第三者に提供いたしません。</p>
+            
+            <h2>6. 個人情報の管理</h2>
+            <p>当社は、個人情報への不正アクセス、漏えい、改ざん、紛失等を防止するため、合理的な安全管理措置を講じます。</p>
+            
+            <h2>7. 外部委託について</h2>
+            <p>業務の一部を外部業者に委託する場合がありますが、委託先には必要な安全管理措置を講じ、適切に監督いたします。</p>
+            
+            <h2>8. 開示・訂正・削除等の請求について</h2>
+            <p>お客様ご本人からの個人情報に関する開示、訂正、利用停止、削除等のご請求には、合理的な範囲で対応いたします。</p>
+            
+            <h2>9. プライバシーポリシーの変更</h2>
+            <p>本ポリシーは、予告なく変更されることがあります。最新の内容は当サイトにてご確認ください。</p>
+            
+            <h2>10. お問い合わせ窓口</h2>
+            <p>個人情報の取扱いに関するお問い合わせは、以下の連絡先までお願いいたします。</p>
+            <div class="company-info">
+                <p><strong>株式会社テマヒマ</strong></p>
+                <p>東京都渋谷区道玄坂1−10−8 渋谷道玄坂東急ビル2F-C</p>
+                <p><a href="mailto:support@temahima.co.jp" style="color: #B3B3B3; text-decoration: underline;">support@temahima.co.jp</a></p>
+            </div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="/" class="back-button">トップページに戻る</a>
+        </div>
+    </div>
+    
+    <footer style="background-color: #0D0D2B; padding: 24px 0;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; align-items: center; gap: 16px; font-size: 0.875rem; color: #6B7280;">
+            <p style="margin-bottom: 16px; color: #6B7280; font-size: 0.875rem;">© 2025 株式会社テマヒマ. All Rights Reserved.</p>
+            <div style="display: flex; gap: 16px;">
+                <a href="/terms.html" style="color: #6B7280; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6B7280'">利用規約</a>
+                <a href="/privacy.html" style="color: #6B7280; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='#6B7280'">プライバシーポリシー</a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        @media (min-width: 640px) {
+            footer > div {
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+            footer p {
+                margin-bottom: 0 !important;
+            }
+        }
+        @media (min-width: 768px) {
+            footer > div {
+                padding: 0 32px !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            footer > div {
+                padding: 0 32px !important;
+            }
+        }
+    </style>
+</body>
+</html>
